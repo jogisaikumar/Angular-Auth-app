@@ -1,0 +1,34 @@
+
+<div class="login-container">
+    <h2>Login Page</h2>
+<form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
+    <!--username field-->
+<div>
+    <label for="username">Username/E-mail</label>
+    <input type="text" 
+        id="username" 
+        name="username" 
+        required 
+        minlength="3" 
+        [(ngModel)]="username"
+        placeholder="Enter Username or Email"
+    />
+</div>
+
+<!--password field-->
+<div>
+    <label for="password">Password</label>
+    <input type="text"
+        id="password"
+        name="password"
+        required
+        minlength="8"
+        [(ngModel)]="password"
+        placeholder="Enter Password"
+    />
+</div>
+
+<!--Submit button-->
+<button type="submit">Submit</button>
+</form>
+</div>
