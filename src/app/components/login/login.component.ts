@@ -21,11 +21,9 @@ export class LoginComponent {
       this.authservice.login(this.username, this.password).subscribe({
         next: (user) => {
           if (user) {
-            console.log("user logged in :", user);
             alert("Login Succesful");
             setTimeout(()=>{
               this.router.navigate(['/home']).then(() => {
-                console.log('redirect to home page')
               });
             }, 300)
           }

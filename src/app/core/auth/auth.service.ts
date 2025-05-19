@@ -46,8 +46,6 @@ export class AuthService {
     this.isAuthenticated = false;
     this.currentUser = null;
     localStorage.removeItem('currentUser');
-    console.log("Logged out Succesfully");
-    alert("Logged out succesfully");
     this.router.navigate(['/login']);
    }
 
